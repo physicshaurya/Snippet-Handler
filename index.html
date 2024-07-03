@@ -1,31 +1,47 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Snippet Handler</title>
-    <link rel="stylesheet" href="styles.css">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
-</head>
-<body>
+    <link rel="stylesheet" href="styles.css" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css"
+    />
+    <!-- Adding JQuery to parse CSV -->
+    <script
+      src="https://code.jquery.com/jquery-3.6.3.min.js"
+      integrity="sha256-pvPw+upLPUjgMXY0G+8O0xUf+/Im1MZjXxxgOcBQBXU="
+      crossorigin="anonymous"
+    ></script>
+    <script
+      src="https://cdnjs.cloudflare.com/ajax/libs/jquery-csv/1.0.21/jquery.csv.min.js"
+      integrity="sha512-Y8iWYJDo6HiTo5xtml1g4QqHtl/PO1w+dmUpQfQSOTqKNsMhExfyPN2ncNAe9JuJUSKzwK/b6oaNPop4MXzkwg=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    ></script>
+  </head>
+  <body>
     <h1>Handle all your snippets at one place</h1>
+    <div id="test"></div>
     <div id="sheetUrlDiv">
-        <a id="sheetUrl" href="#" target="_blank">View Source Sheet</a>
+      <a id="sheetUrl" href="#" target="_blank">View Source Sheet</a>
     </div>
-    
+
     <table>
-        <thead>
-            <tr>
-                <th>Snippet</th>
-                <th>Action</th>
-            </tr>
-        </thead>
-        <tbody id="snippetTable">
-            <!-- Rows will be dynamically populated here -->
-        </tbody>
+      <thead>
+        <tr>
+          <th>Snippet</th>
+          <th>Action</th>
+        </tr>
+      </thead>
+      <tbody id="snippetTable">
+        <!-- Rows will be dynamically populated here -->
+      </tbody>
     </table>
-    
+
     <script src="utils.js"></script>
     <script src="script.js"></script>
-</body>
+  </body>
 </html>

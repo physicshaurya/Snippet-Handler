@@ -1,11 +1,15 @@
 const sheetId = '1jq6AWJZ5AJ1EihVkIbtx0r1ZrmV9nuZPNjwBLQMsnNs';
-const sheetUrl = `https://docs.google.com/spreadsheets/d/${sheetId}/gviz/tq?tqx=out:csv`;
+
+const sheetName = encodeURIComponent("Sheet1");
+const sheetUrl = `https://docs.google.com/spreadsheets/d/${sheetId}/gviz/tq?tqx=out:csv&sheet=${sheetName}`;
+
+// const sheetUrl = `https://docs.google.com/spreadsheets/d/${SHEET_ID}/gviz/tq?tqx=out:csv`;
 const sheetUrlSource = `https://docs.google.com/spreadsheets/d/${sheetId}/edit?usp=sharing`;
 
 document.addEventListener('DOMContentLoaded', async () => {
     try {
         const contentDescriptionMap = await fetchContentDescriptionMap(sheetUrl);
-        console.log('Fetched Data:', contentDescriptionMap);
+        console.log('Fetched Map:', contentDescriptionMap);
         populateTable(contentDescriptionMap);
         const sheetUrlElement = document.getElementById('sheetUrl');
         sheetUrlElement.href = sheetUrlSource;
