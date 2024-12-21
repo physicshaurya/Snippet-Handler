@@ -60,6 +60,7 @@ h1 {
 h1:hover {
     color: #16a085; /* A teal color to match green elements */
     transform: scale(1.1); /* Slightly enlarge on hover */
+    text-shadow: 0 0 10px rgba(22, 160, 133, 0.8); /* Glow Effect */
 }
 
 
