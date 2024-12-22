@@ -15,7 +15,7 @@ document.addEventListener('DOMContentLoaded', async () => {
         populateTable(contentDescriptionMap);
         const sheetUrlElement = document.getElementById('sheetUrl');
         sheetUrlElement.href = sheetUrlSource;
-        greetDiv.innerHTML = 'Good ' + getGreeting() + ' ' + name;
+        greetDiv.innerHTML = 'Good ' + getGreeting() + '! ' + name;
     } catch (error) {
         console.error('Error fetching data:', error);
     }
