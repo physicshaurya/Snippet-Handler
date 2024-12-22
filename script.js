@@ -7,6 +7,7 @@ const sheetUrl = `https://docs.google.com/spreadsheets/d/${sheetId}/gviz/tq?tqx=
 const sheetUrlSource = `https://docs.google.com/spreadsheets/d/${sheetId}/edit?usp=sharing`;
 const greetDiv = document.getElementById('greet');
 const name = 'Shaurya Pratap Singh';
+greetDiv.innerHTML = 'Good ' + getGreeting() + '! ' + name;
 
 document.addEventListener('DOMContentLoaded', async () => {
     try {
@@ -15,7 +16,6 @@ document.addEventListener('DOMContentLoaded', async () => {
         populateTable(contentDescriptionMap);
         const sheetUrlElement = document.getElementById('sheetUrl');
         sheetUrlElement.href = sheetUrlSource;
-        greetDiv.innerHTML = 'Good ' + getGreeting() + '! ' + name;
     } catch (error) {
         console.error('Error fetching data:', error);
     }
